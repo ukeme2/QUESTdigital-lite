@@ -1,0 +1,10 @@
+openai
+numpy
+soundfile
+sounddevice
+googletrans==4.0.0-rc1
+gTTS
+librosa
+pygame
+pyinstaller
+python-dotenv

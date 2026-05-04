@@ -1,0 +1,21 @@
+# Secrets and Config
+.env
+*.spec
+
+# Python internals
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environments
+venv/
+.venv/
+env/
+
+# Build and Distribution
+dist/
+build/
+*.egg-info/
+
+# App-specific temporary files
+tts_*
