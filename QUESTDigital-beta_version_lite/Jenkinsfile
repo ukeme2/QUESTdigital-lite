@@ -6,8 +6,6 @@ pipeline {
                 echo 'Cloning repository...'
             }
          }
-    }
-    stages {
         stage('Build'){
             steps {
                 echo 'Running python file'
