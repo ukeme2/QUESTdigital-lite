@@ -24,7 +24,7 @@ def restricted_float(x):
     try:
         x = float(x)
     except ValueError:
-        raise argparse.ArgumentTypeError(f"{x} is not a floating-point number"
+        raise argparse.ArgumentTypeError(f"{x} is not a floating-point number")
     if x < 0.001 or x > 1.0:
         raise argparse.ArgumentTypeError(f"{x} is out of range [0.001, 1.0]")
     return x
