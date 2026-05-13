@@ -22,7 +22,7 @@ import sys
 #memory test
 def restricted_float(x):
     try:
-        x = float(x
+        x = float(x)
     except ValueError:
         raise argparse.ArgumentTypeError(f"{x} is not a floating-point number")
     if x < 0.001 or x > 1.0:
