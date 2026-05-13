@@ -1,9 +1,17 @@
 pipeline {
     agent any
+     stages {
+         stage('Clone') {
+            steps {
+                echo 'Cloning repository...'
+            }
+         }
+    }
     stages {
         stage('Build'){
             steps {
-                echo 'Building the project'
+                echo 'Running python file'
+                bat 'python  stefie.py'
             }
         }
         stage('Test'){
