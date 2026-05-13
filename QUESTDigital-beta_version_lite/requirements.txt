@@ -2,7 +2,7 @@ openai>=1.0.0
 numpy
 soundfile
 sounddevice
-googletrans==4.0.0-rc1
+googletrans==3.1.0a0
 gTTS
 librosa
 pygame
