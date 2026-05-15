@@ -10,15 +10,13 @@ pipeline {
             steps {
                 //map jenkins secret ID to a temporary environment variable
                 withCredentials([string(credentialsId: 'OPEN_API_KEY', variable: 'OPENAI_API_KEY')]) {
-                echo 'Running python file'
                 bat '''
                 @echo off
                 echo 'Checking Directory'
                 dir /b
                 echo 'Entering sub-folder'
-                cd QUESTDIGITAL-BETA_VERSION_LITE
-                echo 'Checking content'
-                dir /b
+                cd QUESTDigital-beta_version_lite
+                echo 'running script'
                 set SDL_VIDEODRIVER=dummy
                 set SDL_AUDIODRIVER=dummy
                 python -m pip install --upgrade pip
