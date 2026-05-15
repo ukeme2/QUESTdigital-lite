@@ -1,7 +1,8 @@
-openai
+openai>=1.0.0
 numpy
 soundfile
 sounddevice
+deep-translator
 googletrans
 gTTS
 librosa

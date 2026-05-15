@@ -9,8 +9,14 @@ pipeline {
         stage('Build'){
             steps {
                 echo 'Running python file'
-                bat 'cd QUESTDIGITAL-BETA_VERSION_LITE && pip install -r requirements.txt'
-                bat ' cd QUESTDIGITAL-BETA_VERSION_LITE && python  stefie.py'
+                bat '''
+                cd QUESTDIGITAL-BETA_VERSION_LITE
+                set SDL_VIDEODRIVER=dummy
+                set SDL_AUDIODRIVER=dummy
+                python -m pip install --upgrade pip
+                python -m pip install -r requirements.txt
+                python stefie.py
+                '''
             }
         }
         stage('Test'){
