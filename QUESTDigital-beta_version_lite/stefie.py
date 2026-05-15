@@ -102,16 +102,17 @@ def audio_stream():
 def keyboard_listener():
     print("Commands: [p] Pause/Resume | [q] Quit")
     while not stop_event.is_set():
+     try:
         key = input().strip().lower()
         if key == "p":
             if pause_event.is_set(): pause_event.clear(); print("PAUSED")
             else: pause_event.set(); print("RESUMED")
         elif key == "q": print("Shutting down..."); stop_event.set()
-except EOFError:
+     except EOFError:
     #If in jenkins, input fails immediately
     #we wait so the thread doesn't crash of loop infinitely
-    time.sleep(1)
-    continue
+        time.sleep(1)
+        continue
 def clean_transcripts(new_text: str, min_overlap_words=3):
     global look_up_text
     import string
