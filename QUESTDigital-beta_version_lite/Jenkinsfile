@@ -9,7 +9,7 @@ pipeline {
         stage('Build'){
             steps {
                 //map jenkins secret ID to a temporary environment variable
-                withCredentials([string(credentialsId: 'OPEN_API_KEY', variable: 'OPENAI_API_KEY')]) {
+                withCredentials([string(credentialsId: 'OPENAI_API_KEY', variable: 'OPENAI_API_KEY')]) {
                 bat '''
                 @echo off
                 echo 'Checking Directory'
